@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -41,7 +41,7 @@ export class SidebarComponent implements OnInit {
     },
   ];
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  constructor(private router: Router) {
     this.router.events.subscribe((ev) => {
       if (ev instanceof NavigationEnd) {
         this.displayRecommendationList = ev.url.includes(
