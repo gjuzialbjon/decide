@@ -1,0 +1,35 @@
+header {
+  height: $headerHt;
+  border-bottom: 1px solid black;
+}
+
+header, .header-left, .ask, .menu-list {
+  display: flex;
+}
+
+.ask {
+  border-right: 1px solid $red;
+  width: $headerHt;
+  height: 100%;
+  cursor: pointer;
+}
+
+.ask-mic-icon {
+  border: 4px solid $red;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  padding: .3rem;
+}
+
+.menu-item {
+  margin-left: 1.8rem;
+  padding: 1.1rem 0;
+
+  &.active, &:hover {
+    color: $red;
+    font-weight: 700;
+  }
+
+  @include active-menu;
+}

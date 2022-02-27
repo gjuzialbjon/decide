@@ -1,0 +1,116 @@
+.stats-card {
+  border: 2px solid gray;
+  border-radius: 0.5rem;
+  margin: 0.5rem 0;
+  overflow: hidden;
+}
+
+.stats-card-header > li {
+  padding: 0.2rem 0.4rem;
+
+  &:first-child {
+    border-right: $border;
+    padding-top: .4rem;
+    padding-bottom: 0;
+  }
+
+  &:not(:first-child) {
+    padding: 0 0.4rem;
+    margin: 0.2rem 0;
+
+    &:not(:last-child) {
+      border-right: 2px solid gray;
+    }
+  }
+}
+
+.stats-card-body {
+  border-top: $border;
+
+  > div {
+    min-height: 77px;
+    width: 25%;
+
+    &:not(:last-child) {
+      border-right: $border;
+    }
+  }
+}
+
+.stats-card-product {
+  padding: 0.5rem;
+  background-color: rgb(231, 230, 230);
+
+  .shirt {
+    padding: 0 1rem;
+  }
+
+  .shirt-details h3 {
+    font-weight: 500;
+  }
+}
+
+.stats-card-units {
+  padding-top: .4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .label {
+    color: gray;
+  }
+
+  .amount {
+    font-size: 2.2rem;
+    font-weight: 800;
+  }
+}
+
+.stats-card-additional {
+  > div {
+    padding: 0.5rem;
+    background-color: #eef7e7;
+  }
+
+  .label {
+  }
+
+  .amount {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 0;
+  }
+}
+
+@media (max-width: 1240px) {
+  .stats-card-body {
+    > div {
+      width: 50%;
+
+      &:nth-child(odd) {
+        border-right: $border;
+      }
+
+      &:nth-child(even) {
+        border-right: none;
+      }
+
+      &:nth-child(-n + 2) {
+        border-bottom: $border;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .stats-card-body {
+    > div {
+      width: 100%;
+
+      &:not(:last-child) {
+        border-bottom: $border;
+        border-right: none;
+      }
+    }
+  }
+}

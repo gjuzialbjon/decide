@@ -1,0 +1,60 @@
+<div class="month-selector d-flex jc-flex-end">
+  <div class="dropdown">
+    <a class="dropdown-trigger" href="#">
+      <img src="assets/media/clock.svg" alt="">
+      <span class="dropdown-label mx-2">Nov 2021</span> 
+      <img src="assets/media/caret.svg" alt="">
+    </a>
+    <ul class="dropdown-menu">
+      <li class="dropdown-menu-item">
+        <a href="#">Dropdown Item 1</a>
+      </li>
+      <li class="dropdown-menu-item">
+        <a href="#">Dropdown Item 2</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="stats-card">
+  <ul class="stats-card-header d-flex ai-center">
+    <li>
+      <img src="assets/media/building.svg" alt="" />
+    </li>
+    <li>Influence plan: December 2021</li>
+    <li>
+      <img src="assets/media/shop.svg" alt="" />
+    </li>
+    <li>#738</li>
+  </ul>
+  <div class="stats-card-body d-flex ai-center fw">
+    <div class="stats-card-product d-flex ai-center">
+      <div class="shirt">
+        <img src="assets/media/shirt.svg" alt="" />
+      </div>
+      <div class="shirt-details">
+        <h3>T-shirts</h3>
+        <p><strong>Fashion</strong> | Week T to T+3</p>
+      </div>
+    </div>
+    <div class="stats-card-units">
+      <span class="label">Shortage units</span>
+      <strong class="amount">{{ 10214 | currency: "":"":"4.0-0" }}</strong>
+    </div>
+    <div class="stats-card-units">
+      <span class="label">Surplus units</span>
+      <strong class="amount">{{ 11500 | currency: "":"":"4.0-0" }}</strong>
+    </div>
+    <div class="stats-card-additional d-flex flex-col">
+      <div class="d-flex ai-center jc-space-between">
+        <span class="label">Additional revenue Impact</span>
+        <strong class="amount">$456K</strong>
+      </div>
+      <hr />
+      <div class="d-flex ai-center jc-space-between">
+        <span class="label">Additional revenue Impact</span>
+        <strong class="amount">$231K</strong>
+      </div>
+    </div>
+  </div>
+</div>

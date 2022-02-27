@@ -1,0 +1,32 @@
+.decide {
+  border-bottom: $border;
+}
+
+.decide-sidebar-content {
+  margin-top: 1.5rem;
+  display: flex;
+}
+
+.decide-content {
+  flex: 1;
+  padding-left: 2rem;
+  border-left: $border;
+}
+
+.actions-buttons {
+  margin-top: .5rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 1000px) {
+  .decide-sidebar-content {
+    flex-direction: column;
+  }
+
+  .decide-content {
+    padding-left: 0;
+    padding-top: 1.5rem;
+    border-left: 0;
+  }
+}

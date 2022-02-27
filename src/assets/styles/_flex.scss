@@ -1,0 +1,27 @@
+$aligns: center, flex-start, flex-end, stretch;
+$justifys: center, flex-start, flex-end, space-between, space-around, space-evenly;
+
+@each $pos in $aligns {
+  .ai-#{$pos} {
+    align-items: $pos;
+  }
+}
+
+@each $pos in $justifys {
+  .jc-#{$pos} {
+    justify-content: $pos;
+  }
+}
+
+.d-flex {
+  display: flex;
+}
+
+.fw {
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+

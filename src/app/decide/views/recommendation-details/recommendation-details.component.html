@@ -1,0 +1,69 @@
+<div class="details-header">
+  <div class="title">
+    <h3>Diwo's Recommendation</h3>
+    <ul class="split-list">
+      <li class="split-list-item">Influence buys</li>
+      <li class="split-list-item">T-20 week</li>
+      <li class="split-list-item">Retail channel</li>
+      <li class="split-list-item">Floorset T to T+3</li>
+    </ul>
+  </div>
+  <div class="image">
+    <h1>diwo</h1>
+  </div>
+</div>
+
+<hr />
+
+<p class="buy-plan-recommendations">Buy Plan Recommendations</p>
+
+<div class="table-wrapper">
+  <table class="table" width="100%">
+    <caption style="text-align: left">
+      <div class="product-details">
+        <div class="product-img">
+          <img src="assets/media/shirt.svg" alt="" />
+        </div>
+        <div class="product-details-list-wrapper">
+          <h3 class="product-title">T-Shirt</h3>
+          <ul class="split-list fw">
+            <li class="split-list-item">SKU@4323122</li>
+            <li class="split-list-item">Whitepuffed Collar T-Shirt</li>
+            <li class="split-list-item">AUR: <strong>{{16.99 | currency }}</strong> </li>
+            <li class="split-list-item">AUR Wash: <strong>15%</strong> </li>
+          </ul>
+        </div>
+      </div>
+    </caption>
+    <thead>
+      <tr>
+        <th>SKU ID</th>
+        <th>Existing Planned Units</th>
+        <th>Unconstrained Demand</th>
+        <th>Constrained Demand</th>
+        <th>AUR</th>
+        <th>New Planned Units</th>
+        <th>Additional Revenue Impact</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let row of recommendationTableData">
+        <td>
+          <strong>{{ row.id }}</strong>
+        </td>
+        <td>{{ row.plannedUnits }}</td>
+        <td>{{ row.unconstrainedDemand }}</td>
+        <td>{{ row.constrainedDemand }}</td>
+        <td>
+          <strong>{{ row.AUR | currency}}</strong>
+        </td>
+        <td>
+          <strong>{{ row.newPlanedUnits }}</strong>
+        </td>
+        <td>
+          <strong>{{ row.additionalRevenueImpact }}</strong>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

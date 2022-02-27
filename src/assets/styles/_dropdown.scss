@@ -1,0 +1,68 @@
+.dropdown {
+  position: relative;
+  
+  &:hover > .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.dropdown-trigger {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  @include text-muted;
+  
+  &:focus + .dropdown-menu {
+    display: block;
+    opacity: 1;
+  }
+  
+  // &::after {
+  //   content: "›";
+  //   position: absolute;
+  //   color: #ED3E44;
+  //   font-size: 24px;
+  //   font-weight: bold;
+  //   transform: rotate(90deg);
+  //   top: -5px;
+  //   right: -15px;
+  // }
+}
+
+.dropdown-label {
+  margin: 0 .5rem;
+}
+
+.dropdown-menu {
+  background-color: $red;
+  display: inline-block;
+  text-align: right;
+  position: absolute;
+  top: 2.5rem;
+  right: -10px;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease; 
+  width: 160px;
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.dropdown-menu-item {
+  cursor: pointer;
+  padding: 1em;
+  text-align: center;
+  
+  &:hover {
+    background-color: darken(#ED3E44, 5%);
+  }
+}
+
+.month-selector {
+  margin-top: .4rem;
+}

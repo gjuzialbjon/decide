@@ -1,0 +1,34 @@
+<div class="sidebar">
+  <ul class="sidebar-header">
+    <li
+      class="sidebar-header-item"
+      routerLink="recommendation"
+      routerLinkActive="active"
+    >
+      Diwo's Recommendation
+    </li>
+    <li
+      class="sidebar-header-item"
+      routerLink="strategies"
+      routerLinkActive="active"
+    >
+      Your strategies
+    </li>
+  </ul>
+  <ul *ngIf="displayRecommendationList" class="sidebar-menu">
+    <li
+      class="sidebar-menu-item"
+      *ngFor="let item of recommendationMenuItems"
+      [routerLink]="item.path"
+      routerLinkActive="active"
+    >
+      <span class="sidebar-menu-item-img-container">
+        <img [src]="item.img" class="sidebar-menu-item-img" alt="" />
+      </span>
+      <span class="sidebar-menu-item-label">{{ item.label }}</span>
+    </li>
+  </ul>
+  <ul *ngIf="!displayRecommendationList" class="sidebar-menu">
+    <!-- In case of Strategy menu -->
+  </ul>
+</div>
