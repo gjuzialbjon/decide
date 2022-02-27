@@ -13,7 +13,7 @@
   </div>
 </div>
 
-<hr />
+<hr/>
 
 <p class="buy-plan-recommendations">Buy Plan Recommendations</p>
 
@@ -29,8 +29,10 @@
           <ul class="split-list fw">
             <li class="split-list-item">SKU@4323122</li>
             <li class="split-list-item">Whitepuffed Collar T-Shirt</li>
-            <li class="split-list-item">AUR: <strong>{{16.99 | currency }}</strong> </li>
-            <li class="split-list-item">AUR Wash: <strong>15%</strong> </li>
+            <li class="split-list-item">
+              AUR: <strong>{{ 16.99 | currency }}</strong>
+            </li>
+            <li class="split-list-item">AUR Wash: <strong>15%</strong></li>
           </ul>
         </div>
       </div>
@@ -55,7 +57,7 @@
         <td>{{ row.unconstrainedDemand }}</td>
         <td>{{ row.constrainedDemand }}</td>
         <td>
-          <strong>{{ row.AUR | currency}}</strong>
+          <strong>{{ row.AUR | currency }}</strong>
         </td>
         <td>
           <strong>{{ row.newPlanedUnits }}</strong>
